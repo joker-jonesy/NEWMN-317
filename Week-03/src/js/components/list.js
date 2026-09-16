@@ -21,9 +21,16 @@ export default class List extends Component {
         self.element.innerHTML = `
             <ul>
             ${store.state.items.map(item => {
-            return `<li>${item}</li>`
+            return `<li>${item}<button>"Delete Item"</button></li>`
         }).join('')}
            </ul>`;
+
+        self.element.querySelectorAll('button').forEach((button, index) => {
+            button.addEventListener('click', () => {
+                store.dispatch('clearItem', {index});
+            //     {index:0}
+            })
+        })
 
         // self.element.querySelectorAll()
 

@@ -5,6 +5,7 @@ export default {
         return state;
     },
     clearItem(state, payload){
+        console.log(payload.index);
         state.items.splice(payload.index, 1);
         return state;
     }
