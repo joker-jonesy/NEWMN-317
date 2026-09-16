@@ -11,6 +11,8 @@ export default class List extends Component {
     render() {
         let self = this;
 
+        // console.log(store.state)
+
         if (store.state.items.length === 0) {
             self.element.innerHTML = `<p>You Haven't Done Anything Yet Loser</p>`;
             return;
@@ -25,6 +27,9 @@ export default class List extends Component {
 
         // self.element.querySelectorAll()
 
+
+    //     array.forEach normal for loop stuff with array
+    //     array.map must return something
 
     }
 }
