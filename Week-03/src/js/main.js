@@ -1,7 +1,8 @@
 // Entry point for the app: wires up the DOM, the store, and the components.
 import store from './store/index.js'
 import List from "./components/list.js";
-import Status from "./components/status.js"
+import Status from "./components/status.js";
+import Visits from "./components/visits.js";
 
 // Grab the form, the text input, and the element used to show validation errors.
 const formElement = document.querySelector(".js-form");
@@ -28,6 +29,7 @@ formElement.addEventListener("submit", event =>{
 // Create the components that render the list of items and the item count.
 const listInstance = new List();
 const statusInstance = new Status();
+const visitInstance = new Visits();
 // Render each component once on page load (they'll also re-render automatically on state changes).
 listInstance.render()
 statusInstance.render();
