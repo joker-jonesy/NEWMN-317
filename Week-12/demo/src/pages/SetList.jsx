@@ -52,7 +52,7 @@ function SetList(){
 
     return (
         <>
-           <h1>SetList</h1>
+           <h1>SetLists</h1>
             {data.length===0? <h2>So Results</h2>:pokemans}
             <p>{error}</p>
         </>
