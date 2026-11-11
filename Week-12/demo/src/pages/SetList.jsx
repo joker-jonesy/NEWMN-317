@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
 
 function SetList(){
     const [loading, setLoading] = useState(true);
@@ -18,6 +19,8 @@ function SetList(){
                 }
 
                 const json = await response.json();
+
+                console.log(json);
 
                 if(isMounted){
                     setData(json.results);
@@ -44,9 +47,9 @@ function SetList(){
     console.log(data)
 
     const pokemans = data.map((item, idx)=>
-    <div key={idx}>
+    <Link to={"/pokemon/"+(idx+1)} key={idx}>
         <h1>{item.name}</h1>
-    </div>
+    </Link>
     )
 
 
